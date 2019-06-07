@@ -1,0 +1,87 @@
+# BROWSER
+BROWSER="firefox"         # Browser to open page
+EMACS="emacs"             # txt editor
+TWITTER="@3l_n1"   # nick twitter
+LANGUAGE="es_ES"
+GOOGLE_ANALITYCS="UA-131560140-1"
+
+# RSS
+LOGO_FEED="https://3ln1pr1.github.io/3ln1pr1.png"
+ICON="https://3ln1pr1.github.io/icon/3ln1pr1-256x256.png"
+IMAGE="https://3ln1pr1.github.io/icon/3ln1pr1.png"
+LANGUAGE_RSS="es"
+
+# HEAD PAGE PREVIEW
+HEAD=$(echo '<head>
+<title>$TITLEPROGRAM</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<div id="logo"><a href="https://3ln1pr1.github.io"><img src="../icon/3ln1pr1.png" border="0"  width="90" height="90" alt="3ln1pr1"></a></div>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css" /><br><br><br><br><br><br><br><br><br>
+')
+
+# HEAD PAGE INDEX, LIST, TAG
+HEAD_PAGE=$(echo '
+<link href="'http://fonts.googleapis.com/css?family=Lato'" rel="'stylesheet'" type="'text/css'"/>
+
+<div id="name"><a href="https://3ln1pr1.github.io/"><tt>Blog del Podcast</tt></div></a>
+
+<div id="icon">
+<a href="https://github.com/3ln1pr1"><img src="./icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/3l_n1"><img src="./icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;
+<a href="https://t.me/E3ln1pr1"><img src="./icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+
+<div id="menu">
+<a href="https://3ln1pr1.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;
+<a href="https://github.com/3ln1pr1/Scripts-en-Bash"><tt>Scripts</tt></a>&nbsp;&nbsp;
+<a href="https://3ln1pr1.github.io/tags.html"><tt>Etiquetas</tt></a></div>')
+
+# HEAD POST PAGE
+HEAD_PAGE_POST=$(echo '
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
+
+<div id="name"><a href="https://3ln1pr1.github.io/"><tt>Blog del Podcast</tt></div></a>
+
+<div id="icon">
+<a href="https://github.com/3ln1pr1"><img src="../icon/github.png"  width="25" height="25" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://twitter.com/3l_n1"><img src="../icon/twitter.png"  width="25" height="25" alt="Twitter"></a>&nbsp;&nbsp;
+<a href="https://t.me/E3ln1pr1"><img src="../icon/telegram.png"  width="25" height="25" alt="Telegram"></a></div>
+
+<div id="menu">
+<a href="https://3ln1pr1.github.io/blog/list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;
+<a href="https://github.com/3ln1pr1/Scripts-en-Bash"><tt>Scripts</tt></a>&nbsp;&nbsp;
+<a href="https://3ln1pr1.github.io/tags.html"><tt>Etiquetas</tt></a></div>')
+
+# MAIN CONTENT. INDEX PAGE
+INDEX=$(echo "Bienvenido al Blog de *3ln1pr1*. Aquí encontraras Notas y scripts que voy tomando en el proceso de mí aprendizaje. En la sección [[https://3ln1pr1.github.io/tags.html][Etiquetas]], Estan los Artículos y Scripts, clasificados por temáticas.")
+
+# MAIN CONTENT. INDEX PAGE
+#ULTIMO_TITULO_PODCAST=$(wget -q -O- "http://feeds.feedburner.com/3ln1pr1" | grep '<title>' | head -3 | tail -1 | sed 's/<title>/ /g' | sed 's/<\/title>/ /g')
+#ULTIMO_PODCAST=$(wget -q -O- "http://feeds.feedburner.com/3ln1pr1" | grep -o '<enclosure url="[^"]*' | grep -o '[^"]*$' | head -1)
+
+# MAIN CONTENT NEXT. INDEX PAGE
+#INDEX_NEXT=$(echo "
+#* $ULTIMO_TITULO_PODCAST
+#+HTML: <audio controls=''><source src="$ULTIMO_PODCAST" />Tu navegador no soporta reproductor de Podcast.</audio>")
+
+# FOOTER WEB. ALL PAGES
+PIE_WEB=$(echo '<p style="text-align: center;"><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license"><img style="border-width: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Licencia de Creative Commons" /></a><br />Este obra est&aacute; bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional</a>.</p><br><br><br>')
+
+
+
+
+#################################################################################################################
+#POST PUBLICATION PROGRAMMING
+#################################################################################################################
+
+# POST PROGRAM SCHEDULE
+PROGRAMS_ORG="$HOME/blog/program.org"
+
+# BLOG FILE
+BLOG_ORG="$HOME/blog/blog.org"
+# BLOG FOLDER
+PATH_BLOG="$HOME/blog/"
+# ORG-BASH-BLOG
+ORG_BASH_BLOG="/usr/bin/org-bash-blog"
+# CONFIG FILES
+PATH_SCRIPTS_PROGRAMS="$HOME/.config/org-bash-blog/"
