@@ -39,7 +39,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date())
 gtag("config", "UA-131560140-1");
-</script><br> <br>
+</script><br>
+    <br>
     <div style="text-align: center;"><a href="https://3ln1pr1.github.io"><img src="icon/repository-open-graph-template_OK.png"
           alt="3ln1pr1" style="left: 182px; width: 942px; top: 28px; height: 420px;"
           border="0"></a><br>
